@@ -1,0 +1,12 @@
+.container {
+    display: block;
+    // width: 100vw;
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+$xs: 576px;
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
