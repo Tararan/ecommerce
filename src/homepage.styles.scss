@@ -5,7 +5,8 @@
 
     &__item {
         display: flex;
-        height: 200px;
+        float: left;
+        height: 250px;
         width: 100%;
         width: calc((100%/3) - 22px);
         min-width: 200px;
@@ -15,6 +16,10 @@
         justify-content: center;
         align-items: center;
 
+        @media (max-width: $sm) {
+            height: 200px;
+        }
+
         @media (max-width: $xs) { 
             width: 100%;
         }
@@ -22,7 +27,7 @@
 
         &--big {
             width: calc((100%/2) - 23px);   
-            height: 300px;
+            height: 250px;
             min-width: 200px;
 
             @media (max-width: $sm) {
