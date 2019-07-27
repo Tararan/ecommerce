@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/App.scss';
-import HomePage from './homepage.component';
+import './components/shared/lazy-loading';
+import HomePage from './pages/homepage.component';
 // import Instagrammer from './pages/instagram-page'; 
 
 function App() {
