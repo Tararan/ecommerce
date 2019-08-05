@@ -1,6 +1,7 @@
 import React from 'react';
 import MenuItem from '../menu-item/menu-item.component';
-import Observer from '../observer/observer';
+import Observer from '../shared/lazy-loading/lazy-loading-observer';
+import uniqid from 'uniqid';
 
 class Menu extends React.Component {
     constructor() {
@@ -174,11 +175,18 @@ class Menu extends React.Component {
     render() {
         {/* directory-menu is menu */}
          return(
-            <div className="menu">
+            <div key={uniqid()} className="menu">
                 {
-                    this.state.sections.map(({ title, imageUrl, id }) => (
-                        <Observer>
-                            { isVisible => <MenuItem isVisible={isVisible} key={id} title={title} imageUrl={imageUrl} />}
+                    this.state.sections.map(({ title, imageUrl }) => (
+                        <Observer key={uniqid()}>
+                            { (shouldLoad) => 
+                                <MenuItem 
+                                    key={uniqid()} 
+                                    shouldLoad={shouldLoad} 
+                                    title={title} 
+                                    imageUrl={imageUrl} 
+                                />
+                            }
                         </Observer>
                     ))
                 }

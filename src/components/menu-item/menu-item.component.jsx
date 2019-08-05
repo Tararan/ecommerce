@@ -1,5 +1,5 @@
 import React, { Component } from "react";
- 
+
 class MenuItem extends Component {
     constructor(props) {
         super(props);
@@ -7,47 +7,69 @@ class MenuItem extends Component {
     }
 
     onLoad = () => {
-        this.setState({ isLoaded: !this.state.isLoaded });
+        this.setState({ isLoaded: true });
     };
 
     render() {
-        const { title, imageUrl, isVisible } = this.props;
+        const { title, imageUrl, shouldLoad } = this.props;
         const { isLoaded } = this.state;
-        if (isVisible) {
+    
+        if (shouldLoad) {
             return (
-                <div 
-                    img-src={ imageUrl }
-                    data-loaded={`${isLoaded}`} 
-                    className='menu__item'
-                    style={{backgroundImage: `url(${ imageUrl })`}}
+                <div className="menu__item"
+                    should-load={`${ shouldLoad }`}
+                    data-loaded={`${ isLoaded }`} 
                 >
-                    <img src={ imageUrl }
-                        className="hidden" 
-                        onLoad={this.onLoad}
-                    />
-                    <div className="menu__item-content">
-                        <h1 className="menu__item-content-title">
-                            { title }
-                        </h1>
-                        <p className="menu__item-content-subtitle">
-                            shop now
-                        </p>
+                    <div className='menu__item-content'
+                        onClick= { this.onClick }
+                        img-src={ imageUrl }
+                        style={{ backgroundImage: `url(${ imageUrl })` }}
+                    >
+                        <div className="menu__item-content-info">
+                            <h1 className="menu__item-content-info-title">
+                                { title }
+                            </h1>
+                            <p className="menu__item-content-info-subtitle">
+                                ~ shop now ~
+                            </p>
+                        </div>
+                        <img className="hidden" 
+                            img-src={ imageUrl }
+                            src={ imageUrl }
+                            onLoad = { this.onLoad }
+                        />
                     </div>
+                    <div className="menu__item-shadow-img" 
+                        img-src={ imageUrl }
+                        style={{backgroundImage: `url(${ imageUrl })`}}
+                    />
                 </div>
             ) 
         } else {
             return (
-                <div className={`menu__item ${isVisible}`} 
-                    img-src={ imageUrl }
+                <div className="menu__item"
+                    should-load={`${ shouldLoad }`}
+                    data-loaded={`${ isLoaded }`} 
                 >
-                    <div className="menu__item-content">
-                        <h1 className="menu__item-content-title">
-                            { title }
-                        </h1>
-                        <p className="menu__item-content-subtitle">
-                            shop now
-                        </p>
+                    <div className='menu__item-content'
+                        onClick= { this.onClick }
+                        img-src={ imageUrl }
+                    >
+                        <div className="menu__item-content-info">
+                            <h1 className="menu__item-content-info-title">
+                                { title }
+                            </h1>
+                            <p className="menu__item-content-info-subtitle">
+                                shop now
+                            </p>
+                        </div>
+                        <img className="hidden" 
+                            img-src={ imageUrl }
+                        />
                     </div>
+                    <div className="menu__item-shadow-img" 
+                        img-src={ imageUrl }
+                    />
                 </div>
             )
         }
