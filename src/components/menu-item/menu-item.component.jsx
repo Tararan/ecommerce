@@ -11,16 +11,16 @@ class MenuItem extends Component {
     };
 
     render() {
-        const { title, imageUrl, shouldLoad } = this.props;
+        const { title, imageUrl, shouldLoad, size } = this.props;
         const { isLoaded } = this.state;
     
         if (shouldLoad) {
             return (
-                <div className="menu__item"
+                <div className={`menu__item ${size}`}
                     should-load={`${ shouldLoad }`}
                     data-loaded={`${ isLoaded }`} 
                 >
-                    <div className='menu__item-content'
+                    <div className="menu__item-content"
                         onClick= { this.onClick }
                         img-src={ imageUrl }
                         style={{ backgroundImage: `url(${ imageUrl })` }}
@@ -40,7 +40,6 @@ class MenuItem extends Component {
                         />
                     </div>
                     <div className="menu__item-shadow-img" 
-                        img-src={ imageUrl }
                         style={{backgroundImage: `url(${ imageUrl })`}}
                     />
                 </div>

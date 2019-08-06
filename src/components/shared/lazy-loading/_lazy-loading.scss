@@ -10,9 +10,9 @@
                 filter 0.5s ease-in-out;
 }
 
-[should-load="true"][data-loaded="true"] .menu__item-shadow-img[img-src] {
-    opacity: 0.75;
-    filter: blur(10px) saturate(1.2);
-    transition: opacity 0.15s ease-in-out,
-                filter 0.5s ease-in-out;
-}
+// [should-load="true"][data-loaded="true"] .menu__item-shadow-img[img-src] {
+//     opacity: 0.75;
+//     filter: blur(10px) saturate(1.4);
+//     transition: opacity 0.15s ease-in-out,
+//                 filter 0.5s ease-in-out;
+// }
