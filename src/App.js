@@ -1,12 +1,22 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import './styles/App.scss';
 import HomePage from './pages/homepage.component';
+
+const HatsPage = () => (
+  <div>
+    <h1> Hats page </h1>
+  </div>
+);
 // import Instagrammer from './pages/instagram-page'; 
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <Switch>
+        <Route exact path='/' component={ HomePage }/>
+        <Route exact path='/hats' component={ HatsPage }/>
+      </Switch>
       {/* For Creating images with colorful drop-shadow */}
       {/* <Instagrammer />  */}
     </div>

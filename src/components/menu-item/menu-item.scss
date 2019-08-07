@@ -40,6 +40,12 @@
     justify-content: center;
     border: 1px solid $charcoal;
     background-color: $night-rider-85;
+    transition: background 0.35s ease-in-out;
+
+    .menu__item:hover & {
+      background-color: $night-rider;
+      transition: background 0.35s ease-in-out;
+    }
   }
 
   &-shadow-img {
