@@ -61,16 +61,13 @@
     filter: blur(10px) saturate(1.4);
     transform: translate3d(0,0,0);
     transition: opacity 0.35s ease-in-out,
-                transform 0.35s ease-in-out,
                 filter 0.35s ease-in-out;
 
     .menu__item:hover & {
       opacity: 1 !important;
-      transform: scale(1.025);
-      filter: blur(10px) saturate(1.8);
+      filter: blur(15px) saturate(2.3);
 
       transition: opacity 0.35s ease-in-out,
-                  transform 0.35s ease-in-out,
                   filter 0.35s ease-in-out;
     }
   }

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from 'react-router-dom';
 
 class MenuItem extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class MenuItem extends Component {
     };
 
     render() {
-        const { title, imageUrl, shouldLoad, size } = this.props;
+        const { title, imageUrl, shouldLoad, size, history, linkUrl, match } = this.props;
         const { isLoaded } = this.state;
     
         if (shouldLoad) {
@@ -19,7 +20,8 @@ class MenuItem extends Component {
                 <div className={`menu__item ${size}`}
                     should-load={`${ shouldLoad }`}
                     data-loaded={`${ isLoaded }`} 
-                >
+                    onClick={() => history.push(`${match.url}${linkUrl}`)}
+                > 
                     <div className="menu__item-content"
                         onClick= { this.onClick }
                         img-src={ imageUrl }
@@ -75,4 +77,4 @@ class MenuItem extends Component {
     }
 }
 
-export default MenuItem;
+export default withRouter(MenuItem);
