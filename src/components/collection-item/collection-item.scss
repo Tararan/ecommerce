@@ -1,0 +1,43 @@
+.collection-item {
+    display: flex;
+    width: 100%;
+    min-width: 200px;
+    height: 400px;
+    position: relative;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+
+    &__image {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.55s ease-in-out;
+
+        .collection-item:hover & {
+            transform: scale(1.15);
+        }
+    }
+
+    &__footer {
+        color: $white;
+        font-size: 20px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 40px;
+        position: absolute;
+        // background-color: $night-rider-85;
+        z-index: 3;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include night-rider-gradient;
+    }
+}

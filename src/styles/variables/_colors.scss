@@ -1,3 +1,10 @@
 $charcoal: #8f8f8f;
 $night-rider-85: rgba(50, 50, 50, 0.85);
 $night-rider: rgba(50, 50, 50, 1);
+
+$black: #000;
+$white: #fff;
+
+@mixin night-rider-gradient {
+    background: linear-gradient(to top,$night-rider-85 0%, transparent 100%);
+}
