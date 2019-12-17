@@ -4,7 +4,12 @@
 
     &__container {
         display: flex;
-        flex-flow: row wrape;
+        flex-flow: row wrap;
+        margin: 0 -10px;
+
+        @media(max-width: $md) {
+            justify-content: center;
+        }
     }
 
     &__title {
