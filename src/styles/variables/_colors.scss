@@ -1,10 +1,14 @@
 $charcoal: #8f8f8f;
+$sub-color: grey;
+$main-color: black;
+$twilight-rider-50: rgba(85, 85, 85, 0.5);
 $night-rider-85: rgba(50, 50, 50, 0.85);
 $night-rider: rgba(50, 50, 50, 1);
+$google-blue: rgb(23, 85, 255);
 
 $black: #000;
 $white: #fff;
 
 @mixin night-rider-gradient {
-    background: linear-gradient(to top,$night-rider-85 0%, transparent 40%);
+    background: linear-gradient(to top, $night-rider-85 0%, transparent 40%);
 }
