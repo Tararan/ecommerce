@@ -5,3 +5,36 @@
 main {
     padding: 100px 0 25px;
 }
+
+* {
+    box-sizing: border-box;
+}
+// Removing outlines from inputs and buttons
+input,
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+
+    &,
+    &:focus,
+    &:active,
+    &:hover {
+        outline: none;
+    }
+}
+
+a {
+
+    &,
+    &:focus,
+    &:active,
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@mixin shrinkLabel {
+    top: -14px;
+    font-size: 12px;
+    color: $main-color;
+}

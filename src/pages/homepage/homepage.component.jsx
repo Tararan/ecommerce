@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '../components/menu/menu.component';
+import Menu from '../../components/menu/menu.component';
 
 const HomePage = () => (
     <div className="container">

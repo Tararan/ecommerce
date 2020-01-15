@@ -1,0 +1,46 @@
+.form-group {
+    position: relative;
+    margin: 45px 0;
+
+    &__input {
+        // height: 50px;
+        border: 1px solid $twilight-rider-50;
+        font-size: 18px;
+        color: $night-rider-85;
+        font-family: 'Baskervville', serif;
+        background: none;
+        background-color: white;
+        color: $sub-color;
+        font-size: 18px;
+        padding: 10px 10px 10px 5px;
+        display: block;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid $sub-color;
+    }
+
+    &__input:focus~&__label {
+        @include shrinkLabel();
+    }
+
+    input[type='password'] {
+        letter-spacing: 0.3em;
+    }
+
+    &__label {
+        position: absolute;
+        color: $sub-color;
+        font-size: 16px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 5px;
+        top: 10px;
+        transition: 300ms ease all;
+    }
+
+    &__label--active {
+        @include shrinkLabel();
+    }
+}
