@@ -22,6 +22,8 @@ class SignIn extends React.Component {
     handleChange = event => {
         const { value, name } = event.target;
         this.setState({ [name]: value })
+        console.log('event');
+        console.log(event.target);
     }
 
     render() {
@@ -41,14 +43,14 @@ class SignIn extends React.Component {
                         required
                     />
                     <FormGroup
-                        name="pasword"
+                        name="password"
                         type="password"
                         handleChange={this.handleChange}
                         value={this.state.password}
                         label='password'
                         required
                     />
-                    <div class="button__wrapper">
+                    <div className="button__wrapper">
                         <Button type="submit" text="submit" />
                         <Button onClick={signInWithGoogle} isGoogleSignIn text="Sign In With Google" />
                     </div>
