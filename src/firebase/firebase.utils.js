@@ -2,7 +2,15 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-
+const config = {
+  apiKey: "AIzaSyBX56QAjcXZpqEMs-Io8WqoCspCcOjAErY",
+  authDomain: "e-commerce-clothing-db.firebaseapp.com",
+  databaseURL: "https://e-commerce-clothing-db.firebaseio.com",
+  projectId: "e-commerce-clothing-db",
+  storageBucket: "e-commerce-clothing-db.appspot.com",
+  messagingSenderId: "378228059818",
+  appId: "1:378228059818:web:875370ba4f2062eb332ad3"
+};
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
