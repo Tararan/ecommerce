@@ -1,7 +1,11 @@
 import React from 'react';
+// <Button isWhite isGoogleSignIn text="text" />
 
-const Button = ({ text, isGoogleSignIn, ...otherProps }) => (
-    <button className={`button ${isGoogleSignIn ? 'button--google' : ''}`} {...otherProps}>
+const Button = ({ text, isGoogleSignIn, isWhite, ...otherProps }) => (
+    <button className={`button
+    ${isWhite ? 'button--white' : ''}
+    ${isGoogleSignIn ? 'button--google' : ''}`}
+        {...otherProps}>
         {`
             ${text ? text : 'Submit'}
         `}

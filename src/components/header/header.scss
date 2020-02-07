@@ -26,15 +26,17 @@
 
     &__menu {
         display: flex;
+        align-items: center;
     }
 
     &__menu-link {
         margin: 0 10px;
         display: flex;
         color: $night-rider;
-        font-family: 'Playfair Display', serif;
+        font-family: 'Baskervville', serif;
+        // font-family: 'Playfair Display', serif;
         transition: opacity 0.25s ease-in-out;
-        text-transform: uppercase;
+        text-transform: capitalize;
         cursor: pointer;
 
         &:hover {

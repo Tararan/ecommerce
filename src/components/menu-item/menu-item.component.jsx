@@ -27,7 +27,7 @@ class MenuItem extends Component {
                         img-src={ imageUrl }
                         style={{ backgroundImage: `url(${ imageUrl })` }}
                     >
-                        <div className="menu__item-content-info">
+                        <div  className="menu__item-content-info">
                             <h1 className="menu__item-content-info-title">
                                 { title }
                             </h1>
@@ -39,6 +39,7 @@ class MenuItem extends Component {
                             img-src={ imageUrl }
                             src={ imageUrl }
                             onLoad = { this.onLoad }
+                            alt=""
                         />
                     </div>
                     <div className="menu__item-shadow-img" 
@@ -66,6 +67,7 @@ class MenuItem extends Component {
                         </div>
                         <img className="hidden" 
                             img-src={ imageUrl }
+                            alt=""
                         />
                     </div>
                     <div className="menu__item-shadow-img" 

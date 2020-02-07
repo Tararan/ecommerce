@@ -6,7 +6,8 @@
     position: relative;
     margin: 5px;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 20px;
+    border: 1px solid $gainsboro-50;
     transition: border-radius 0.75s ease-in-out;
     width: calc(25% - 10px);
 
