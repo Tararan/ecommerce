@@ -1,5 +1,6 @@
 .collection-item {
     display: flex;
+    transform: scale(1);
     width: 100%;
     min-width: 200px;
     height: 200px;
@@ -7,7 +8,9 @@
     margin: 5px;
     overflow: hidden;
     border-radius: 20px;
-    border: 1px solid $gainsboro-50;
+    border: 1px solid $twilight-rider-50;
+    box-shadow: 0px 10px 35px -5px rgba(0,0,0,0.75);
+
     transition: border-radius 0.75s ease-in-out;
     width: calc(25% - 10px);
 

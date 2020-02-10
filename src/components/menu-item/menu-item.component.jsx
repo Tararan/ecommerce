@@ -42,9 +42,9 @@ class MenuItem extends Component {
                             alt=""
                         />
                     </div>
-                    <div className="menu__item-shadow-img" 
+                    {/* <div className="menu__item-shadow-img" 
                         style={{backgroundImage: `url(${ imageUrl })`}}
-                    />
+                    /> */}
                 </div>
             ) 
         } else {

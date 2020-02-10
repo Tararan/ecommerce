@@ -9,8 +9,8 @@ $night-rider-25: rgba(50, 50, 50, 0.25);
 $night-rider: rgba(50, 50, 50, 1);
 $google-blue: rgb(23, 85, 255);
 
-$black: #000;
-$white: #fff;
+$black: #000000;
+$white: #ffffff;
 
 @mixin night-rider-gradient {
     background: linear-gradient(to top, $night-rider-85 0%, transparent 40%);
