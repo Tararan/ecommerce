@@ -14,6 +14,7 @@ const CollectionItem = ({ item, addItem }) => {
             </div>
             <Button onClick={() => addItem(item)} isWhite text="add to cart" />
         </div>
+
     )
 };
 
