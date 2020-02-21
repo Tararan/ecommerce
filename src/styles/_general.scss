@@ -9,6 +9,7 @@ main {
 * {
     box-sizing: border-box;
 }
+
 // Removing outlines from inputs and buttons
 input,
 input[type="email"],
@@ -37,4 +38,9 @@ a {
     top: -14px;
     font-size: 12px;
     color: $main-color;
+}
+
+main {
+    background-image: url('../images/noise-txtr.png');
+    background-zise: 250px;
 }

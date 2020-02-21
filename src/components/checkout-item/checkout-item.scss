@@ -20,7 +20,6 @@
 
 
     // &__name,
-    // &__quantity,
     // &__price {
     //     width: 23%;
     // }
@@ -28,9 +27,67 @@
     // &__quantity {
     //     margin-left: -120px;
     // }
+    &__quantity {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__quantity-arrow {
+        cursor: pointer;
+        position: relative;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            // right: 0;
+            background-color: $night-rider;
+            width: 12px;
+            height: 1px;
+            transform: rotate(-45deg);
+            transform-origin: left center;
+        }
+
+        &:after {
+            transform: rotate(45deg);
+        }
+
+        &:last-child {
+            transform: scaleX(-1);
+            // align-items: flex-end;
+        }
+    }
+
+
 
     &__remove {
         padding-left: 12px;
         cursor: pointer;
+        position: relative;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            background-color: $night-rider;
+            width: 25px;
+            height: 1px;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(135deg);
+        }
     }
 }
